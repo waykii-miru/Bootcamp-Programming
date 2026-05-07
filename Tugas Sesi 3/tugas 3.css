@@ -89,10 +89,51 @@ body {
     background-color: #c08860;
 }
 
+.header-image {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header-image img {
-    max-width: 320px;
+    position: absolute;
+    width: 230px;
+    height: 320px;
+    object-fit: cover;
     border-radius: 24px;
-    box-shadow: 0 18px 30px rgba(92, 58, 33, 0.12);
+    box-shadow: 0 18px 30px rgba(92, 58, 33, 0.18);
+    transition: all 0.4s ease;
+}
+
+/* Left image */
+.img1 {
+    left: 40px;
+    top: 60px;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+/* Middle image */
+.img2 {
+    left: 150px;
+    top: 120px;
+    z-index: 3;
+}
+
+/* Right image */
+.img3 {
+    left: 270px;
+    top: 60px;
+    transform: rotate(10deg);
+    z-index: 2;
+}
+
+/* Hover effect */
+.header-image img:hover {
+    transform: scale(1.05);
+    z-index: 5;
 }
 
 /* Biodata */
@@ -151,9 +192,19 @@ body {
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    /* gap: 1.5rem; */
+}
+
+.carousel-box {
+    width: 450px;
+}
+
+.carousel-item img {
+    border-radius: 20px;
 }
 
 .portfolio-item {
